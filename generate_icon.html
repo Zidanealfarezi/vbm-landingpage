@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <canvas id="canvas" width="256" height="256"></canvas>
+    <img id="source" src="logo.png" style="display:none;">
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const img = document.getElementById('source');
+
+        img.onload = () => {
+            // Clear canvas
+            ctx.clearRect(0, 0, 256, 256);
+
+            // Calculate dimensions to maintain aspect ratio
+            const scale = Math.min(256 / img.width, 256 / img.height);
+            const w = img.width * scale;
+            const h = img.height * scale;
+            const x = (256 - w) / 2;
+            const y = (256 - h) / 2;
+
+            // Draw image centered
+            ctx.drawImage(img, x, y, w, h);
+
+            // Output base64 to body for easy scraping
+            const dataURL = canvas.toDataURL('image/png');
+            const output = document.createElement('div');
+            output.id = 'result';
+            output.innerText = dataURL;
+            document.body.appendChild(output);
+        };
+    </script>
+</body>
+
+</html>
