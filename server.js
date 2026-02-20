@@ -18,6 +18,7 @@ http.createServer((req, res) => {
         '.jpg': 'image/jpg',
         '.gif': 'image/gif',
         '.svg': 'image/svg+xml',
+        '.ico': 'image/x-icon',
     };
 
     const contentType = mimeTypes[extname] || 'application/octet-stream';

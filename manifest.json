@@ -1,0 +1,26 @@
+{
+  "name": "Vendor Booth Medan",
+  "short_name": "VBM",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0A0A0A",
+  "theme_color": "#FFDE00",
+  "description": "Jasa Pembuatan Booth Pameran & Event Production di Medan",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
